@@ -17,7 +17,7 @@ public class MainController {
 	@PostMapping("/now")
 	public String getResponse(@RequestBody Map<String,String> payload) {
 		String question = payload.get("question");
-		String response = wb.getAnswer(question);
-		return response;
+		//String response = wb.getAnswer(question);
+		return "Gemini says: i have recived. " + question;
 	}
 }
